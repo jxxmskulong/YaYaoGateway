@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="com.yayao.dao.NewsDao">
+<select id="selectNewsByID" parameterType="Integer" resultType="com.yayao.bean.News" >
+select * from news_tb where id=#{id}
+</select>
+  <!--配置一个resultMap 指定返回的类型 -->  
+    <resultMap id="typeNews" type="com.yayao.bean.News">  
+        <id column="id" property="id" />  
+        <result column="type" property="type" />  
+        <result column="title" property="title" />  
+        <result column="createDate" property="createDate" />  
+        <result column="author" property="author" />  
+        <result column="views" property="views" />  
+        <result column="content" property="content" />  
+    </resultMap>  
+    <!-- 返回一个list的写法 -->  
+    <select id="showAllNews"  resultMap="typeNews" parameterType="String" >  
+        select id,type,title,createDate,author,views,content from news_tb where type=#{type}  
+  
+    </select>
+<insert id="addNews" parameterType="com.yayao.bean.News" flushCache="true">  
+   INSERT INTO news_tb (id,type,title,createDate,author,views,content) VALUES (#{id},#{type},#{title},#{createDate},#{author},#{views},#{content})  
+</insert>  
+<!-- <select id="getUser" parameterType="User" resultType="User">  
+    SELECT * FROM user WHERE username=#{username} AND password=#{password}  
+</select>  
+<update id="updateUser" parameterType="User">  
+    UPDATE user SET password=#{password} WHERE id=#{id}  
+</update>  
+<delete id="deleteUser" parameterType="int">  
+    DELETE FROM user WHERE id=#{id}  
+</delete>  
+<select id="getUserList" parameterType="User" resultType="User">  
+    SELECT * FROM user WHERE id=#{id}  
+</select> 
+<select id="getAllUserList" parameterType="User" resultType="User">  
+    SELECT * FROM user 
+</select>  -->
+</mapper>

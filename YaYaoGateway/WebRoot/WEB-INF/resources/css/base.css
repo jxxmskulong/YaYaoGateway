@@ -1,0 +1,192 @@
+/**
+**rest
+*/
+html{
+/* 	overflow:-Scroll; 
+	overflow-x:hidden;
+*/
+	 background-color:#000; 
+/* 	 background-color:#ffa400;  */
+}
+/**
+**a标签
+*/
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+/**
+**p标签
+*/
+p{
+ color:#666;
+ font-size:20px;
+ line-height:220%;
+}
+/**
+**newsDynamic_ul标签
+*/
+.newsDynamic_ul li
+{
+	font-size:20px;
+}
+.newsDynamic_ul li a:hover{
+	color: red;
+}
+/**
+**首行缩进
+*/
+p{
+	text-indent:2em;
+}
+/**
+*首页 联系我们地址与座机
+*/
+#index_concactUS{
+	width:300px;
+}
+/**
+**form表单
+*/
+form{
+	color:#1685a9;
+	font-size:1.2em;
+}
+/**
+**container
+*/
+.container{
+	padding:15px;
+}
+/**
+*
+*轮播图片
+*/
+.carousel-inner{
+	height:350px;
+}
+.carousel-inner .item img{
+	width:100%;
+	height:350px;
+}
+@media( max-width:768px){
+	.carousel-inner{
+	height:150px;
+}
+.carousel-inner .item img{
+	width:100%;
+	height:150px;
+}
+} 
+/*
+*
+*回到顶部
+*/
+#gotoTop{
+	top:90%;
+	display:block;
+	border:1px solid blue;
+	padding:8px;
+	position:fixed;
+	right:20px;
+	z-index:9999;
+	text-decoration:none;
+	background-color:blue;
+	border-radius:5px;
+	opacity:0.5; 
+	cursor:pointer;
+}
+/*
+*
+*底部闪烁div
+*/
+#bottomhr{
+	margin-bottom:-5px;
+	
+}
+/*
+*
+*底部
+*/
+.foot{
+	background-color:#000;
+	height:auto;
+	color:white;
+	width:100%;
+}
+/*
+*
+*底部二维码
+*/
+.QRCode{
+	margin-top:5%;
+	text-align:center;
+}
+/*
+*
+*底部copyright
+*/
+.foot_copy{
+	
+	font-size:20px;
+}
+/*
+*
+*联系我们
+*/
+.foot_link{
+	margin-top:7%;
+	font-size:18px;
+}
+/*
+*lbsmap
+*/
+.LBSMAP_index{
+width:300px;
+height:300px;
+}
+.LBSMAP_contactUS{
+width:600px;
+height:400px;
+}
+@media(max-width:1200px){
+	.LBSMAP_contactUS{
+width:300px;
+height:300px;
+}
+}
+/*
+*404notFound
+*/
+#notFound1{
+	font-size:10em;
+	color:#ff3300;
+}
+#notFound1:hover{
+	font-size:10em;
+	color:#0c8918;
+}
+#notFound2{
+	font-size:10em;
+	color:#0c8918;
+}
+#notFound2:hover{
+	font-size:10em;
+	color:#4b5cc4;
+}
+#notFound3{
+	font-size:10em;
+	color:#4b5cc4;
+}
+#notFound3:hover{
+	font-size:10em;
+	color:#ff3300;
+}
+/**
+*表单验证改变字体样式
+*/
+.error{
+	    	color:red;
+	    }
