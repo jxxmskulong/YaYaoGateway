@@ -48,4 +48,12 @@ public class NewsDaoImpl implements NewsDao{
 		 sqlSession.selectList("com.yayao.dao.NewsDao.addNews", news);
 	}
 
+	/**
+	 * 更新新闻
+	 */
+	public void updateNews(News news) {
+		sqlSession.update("com.yayao.dao.NewsDao.updateNews", news);
+		
+	}
+
 }

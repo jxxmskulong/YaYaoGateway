@@ -18,11 +18,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="resources/css/base.css">
 	<script type="text/javascript" src="resources/js/jQuery1.11.3.js"></script>
-	<script type="text/javascript" src="resources/js/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="resources/js/bootstrap3.2.0.js"></script>
 	<script type="text/javascript" src="resources/js/base.js"></script>
-	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=3a8218d248222e29a8ed7fe0d29ff517"></script>
-	<script type="text/javascript" src="resources/js/index.js"></script>
+	<script type="text/javascript" src="resources/js/caseCenter.js"></script>
   </head>
   
   <body>
@@ -53,9 +51,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         <li><a href="qualityServices" >优质服务</a></li>
                     </ul>
                 </li>
-                <li><a href="caseCenter" >案例中心</a></li>
+                <li class="active"><a href="caseCenter" >案例中心</a></li>
                 <li><a href="customerMessage" >客户留言</a></li>
-                <li class="active"><a href="contactUS">联系我们</a></li>
+                <li><a href="contactUS">联系我们</a></li>
             </ul>
         </div>
     </div>
@@ -90,45 +88,34 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </div> 
 <!-- 主体轮播end -->
 
-<!-- contactUS -->
+<!-- caseCenter -->
 <div class="panel panel-default">
    <div class="panel-heading">
       <div class="page-header">
-   		<h2 class="col-md-offset-1">contactUS</h2>
+   		<h2 class="col-md-offset-1">caseCenter</h2>
 	  </div>
 		<ol class="col-md-offset-1 breadcrumb">
   			<li><a href="index">网站首页</a></li>
- 			<li class="active">联系我们</li>
+ 			<li class="active">案例中心</li>
 		</ol> 
 	</div>
    <div class="panel-body">
-  		 <div class="jumbotron container">
-  		 
- <!-- 主体内容 -->
-   <div id="indexContent" class="row">
- <!-- 联系我们 -->
-  <div id="contactIndex" class="col-sm-7">
-  	<div class="LBSMAP_contactUS" id="LBSMAP">
-  	</div>
-  	</div>
-  <!-- 联系我们end -->
-  <!-- 客户表单 -->
-  <div class="col-sm-5 container">
-  <div class="row">
-  <div class="h3" >您能给我们多少信任，我们就能给您多大惊喜</div>
-  	<div class="alert alert-info">
-  <div><span >公司地址：</span>湖南省长沙市岳麓区阳光城1107室</div>
-  	<div><span>公司座机：</span>0731-88033992</div>
-  	</div>
+  <div class="container caseDIV">
+   <div class="row">
+  <div class="col-lg-6">
+  <div class="glyphicon glyphicon-leaf"></div>
+  <img src="resources/img/caseCenter/OnceBloodAndFire.jpg"/>
+  <div></div>
+  </div>
+  <div class=" col-lg-6">
+  <div class="glyphicon glyphicon-leaf"></div>
+  <img src="resources/img/caseCenter/TheMostBeautifulEmbroideryXiuNv.jpg"/>
+  <div></div>
   </div>
   </div>
-  </div>
-  <!-- 客户表单end -->
-  		 
-  		 </div>
   	</div>
   	</div>
- <!-- contactUS end -->
+ <!-- caseCenter end -->
   <!-- 小球 -->
 <div id="bottomhr">
   </div>
@@ -138,8 +125,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <a class="glyphicon glyphicon-hand-up"  id="gotoTop">回到顶部</a>
   </div>
   <!-- 回到顶部 end-->
-  </div>
-  <!-- 主体内容end -->
   <!-- 底部 -->
   <div class="foot container">
   <div class="row">

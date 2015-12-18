@@ -36,6 +36,41 @@ p{
 	color: red;
 }
 /**
+**caseCenter 案例
+*/
+.caseDIV div div img{
+	width:500px;
+	height:500px;
+	box-shadow:0 0 10px red;
+	border:1px solid red;
+	border-radius:222px;
+}
+.caseDIV div div div:first-child{
+	font-size:8em;
+	color:green;
+	left:45%;
+	margin-bottom:5px;
+	transform:rotate(10deg);
+}
+.caseDIV div div img+div{
+	width:500px;
+	height:500px;
+	margin-top:-500px;
+	box-shadow:0 0 10px green;
+	opacity:0.5;
+	border:1px solid green;
+	border-radius:222px;
+	background-color:green;
+	text-align:center;
+	line-height:500px;
+	text-shadow:0 0 5px blue;
+	color:white;
+	font-size:32px;
+	font-weight:800;
+	display: none;
+}
+
+/**
 **首行缩进
 */
 p{

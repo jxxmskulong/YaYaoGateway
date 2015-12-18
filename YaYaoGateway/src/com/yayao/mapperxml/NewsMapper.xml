@@ -18,11 +18,13 @@ select * from news_tb where id=#{id}
     <!-- 返回一个list的写法 -->  
     <select id="showAllNews"  resultMap="typeNews" parameterType="String" >  
         select id,type,title,createDate,author,views,content from news_tb where type=#{type}  
-  
     </select>
 <insert id="addNews" parameterType="com.yayao.bean.News" flushCache="true">  
    INSERT INTO news_tb (id,type,title,createDate,author,views,content) VALUES (#{id},#{type},#{title},#{createDate},#{author},#{views},#{content})  
-</insert>  
+</insert> 
+<update id="updateNews" parameterType="com.yayao.bean.News">
+ UPDATE news_tb SET type=#{type},title=#{title},createDate=#{createDate},author=#{author},views=#{views},content=#{content} WHERE id=#{id}
+</update> 
 <!-- <select id="getUser" parameterType="User" resultType="User">  
     SELECT * FROM user WHERE username=#{username} AND password=#{password}  
 </select>  

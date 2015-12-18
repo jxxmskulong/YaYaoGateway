@@ -20,4 +20,8 @@ public interface NewsDao {
 	 * 增加新闻
 	 */
 	public void addNews(News news);
+	/**
+	 * 更新新闻
+	 */
+	public void updateNews(News news);
 }

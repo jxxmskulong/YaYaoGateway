@@ -28,6 +28,8 @@ public class NewsController {
 	@RequestMapping({"/newsDynamic/{selectNewsByID}"})
 	public String selectNewsByID(@PathVariable("selectNewsByID")Integer id,Model model){
 		News news = newsService.selectNewsByID(id);
+		news.setViews(news.getViews()+1);//增加浏览次数
+		newsService.updateNews(news);
 		model.addAttribute("news", news);
 		return "foreground/newsDynamic";
 		

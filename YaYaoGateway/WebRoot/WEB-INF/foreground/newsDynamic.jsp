@@ -154,7 +154,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="col-sm-offset-5">
 		<ul class="pagination">
   			<li><a href="prevPage">&laquo;</a></li>
-  			<li class="active"><a href="#">1</a></li>
+  			<li class="active"><a href="">1</a></li>
   			<li class="disabled"><a href="#">2</a></li>
  			<li><a href="#">3</a></li>
   			<li><a href="#">4</a></li>
