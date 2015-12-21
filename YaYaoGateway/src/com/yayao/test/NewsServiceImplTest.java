@@ -1,6 +1,8 @@
 package com.yayao.test;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -37,9 +39,11 @@ public class NewsServiceImplTest extends AbstractTransactionalJUnit4SpringContex
 	public void testSelectNewsByID() {
 	}
 
+	@SuppressWarnings("deprecation")
 	@Test
 	public void testShowAllNews() {
-		List<News> list = newsService.showAllNews("行业资讯");
+		Map<String, Object> map=new HashMap<String, Object>();
+		List<News> list = newsService.showAllNews(map);
 		for (News news : list) {
 			System.out.println(news.getId()+" "+news.getType()+" "+news.getViews()+" "+news.getAuthor()+" "+news.getCreateDate().toLocaleString()+" "+news.getContent()+"");
 		}

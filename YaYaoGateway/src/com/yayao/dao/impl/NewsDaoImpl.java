@@ -1,17 +1,14 @@
 package com.yayao.dao.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
 import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.stereotype.Repository;
 
-import com.yayao.bean.Customer;
 import com.yayao.bean.News;
-import com.yayao.dao.CustomerDao;
 import com.yayao.dao.NewsDao;
 /**
  * 客户管理接口实现
@@ -36,8 +33,10 @@ public class NewsDaoImpl implements NewsDao{
 	/**
 	 * 根据条件查询所有新闻
 	 */
-	public List<News> showAllNews(String type) {
-		List<News> list = sqlSession.selectList("com.yayao.dao.NewsDao.showAllNews", type);
+	public List<News> showAllNews(Map<String, Object> map) {
+		//List<News> list = sqlSession.selectList("com.yayao.dao.NewsDao.showAllNews", map);
+		NewsDao newsDao = sqlSession.getMapper(NewsDao.class);
+		List<News> list = newsDao.showAllNews(map);
 		return list;
 	}
 

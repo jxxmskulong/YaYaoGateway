@@ -16,8 +16,11 @@ select * from news_tb where id=#{id}
         <result column="content" property="content" />  
     </resultMap>  
     <!-- 返回一个list的写法 -->  
-    <select id="showAllNews"  resultMap="typeNews" parameterType="String" >  
-        select id,type,title,createDate,author,views,content from news_tb where type=#{type}  
+    <select id="showAllNews"  resultMap="typeNews" parameterType="java.util.Map" >  
+        select id,type,title,createDate,author,views,content from news_tb where type=#{type,jdbcType=VARCHAR} 
+        <if test="pageFirst!=null and pageSize!=null  and !pageFirst.equals('')">
+        limit #{pageFirst,jdbcType=INTEGER},#{pageSize,jdbcType=INTEGER}  
+        </if>
     </select>
 <insert id="addNews" parameterType="com.yayao.bean.News" flushCache="true">  
    INSERT INTO news_tb (id,type,title,createDate,author,views,content) VALUES (#{id},#{type},#{title},#{createDate},#{author},#{views},#{content})  

@@ -22,6 +22,7 @@ public class News implements Serializable {
 		super();
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public String toString() {
 		return "News [id=" + id + ", type=" + type + ", title=" + title

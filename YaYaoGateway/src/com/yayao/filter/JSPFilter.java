@@ -9,7 +9,6 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 /**
  * 过滤请求实现rest风格
  * @author yy
@@ -23,16 +22,17 @@ public class JSPFilter implements Filter {
 		
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response,
 			FilterChain chain) throws IOException, ServletException {
 		 // 获得在下面代码中要用的request,response
         HttpServletRequest servletRequest = (HttpServletRequest) request;
-        HttpServletResponse servletResponse = (HttpServletResponse) response;
+        //HttpServletResponse servletResponse = (HttpServletResponse) response;
 // 获得用户请求的URI
-        String rpath = servletRequest.getRequestURI(); 
+       // String rpath = servletRequest.getRequestURI(); 
         String path=servletRequest.getServletPath();
-        String cpath = servletRequest.getContextPath();
+       // String cpath = servletRequest.getContextPath();
         String strBackUrl=servletRequest.getRealPath("/");
 /*if(path.indexOf("resources")>-1){
 	servletResponse.getWriter().write("/WEB-INF"+path);

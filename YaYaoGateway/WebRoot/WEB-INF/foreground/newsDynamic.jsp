@@ -150,19 +150,127 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</c:if>
 		<!-- 新闻实体end -->
 		<!-- 分页 -->
-		<c:if test="${newsList.size()>=0}"> 
+		${pageMap.pageNo}
+		${pageMap.pageSize}
+		${pageMap.allRow}
+		${pageMap.totalPage}
+		<!-- 行业资讯-->
+		<c:if test="${newsList[0].type=='行业资讯'}"> 
 		<div class="col-sm-offset-5">
 		<ul class="pagination">
-  			<li><a href="prevPage">&laquo;</a></li>
-  			<li class="active"><a href="">1</a></li>
-  			<li class="disabled"><a href="#">2</a></li>
- 			<li><a href="#">3</a></li>
-  			<li><a href="#">4</a></li>
-  			<li><a href="#">5</a></li>
-  			<li><a href="nextPage">&raquo;</a></li>
+  			<li>
+  			<a href="industryInformation/pagination/prevPage"
+  			<c:if test="${pageMap.pageNo==1}">
+  			onClick="return false;"
+  			</c:if>
+  			>
+  			&laquo;</a>
+  			</li>
+  			<c:if test="${pageMap.totalPage<=pageMap.pageNo+4}">
+  			<c:forEach begin="${pageMap.pageNo}" end="${pageMap.totalPage}" varStatus="status">
+  			<li <c:if test="${status.index==pageMap.pageNo}">
+  			class="active"
+  			</c:if>
+  			><a href="industryInformation/pagination/${status.index }">${status.index}</a></li>
+  			</c:forEach>
+  			</c:if>
+  			<c:if test="${pageMap.totalPage>pageMap.pageNo+4}">
+  			<c:forEach begin="${pageMap.pageNo}" end="${pageMap.pageNo+4}" varStatus="status">
+  			<li <c:if test="${status.index==pageMap.pageNo}">
+  			class="active"
+  			</c:if>
+  			><a href="industryInformation/pagination/${status.index }">${status.index}</a></li>
+  			</c:forEach>
+  			</c:if>
+  			
+  			<li><a href="industryInformation/pagination/nextPage"
+  			<c:if test="${pageMap.pageNo==pageMap.totalPage}">
+  			onClick="return false;"
+  			</c:if>
+  			>&raquo;</a></li>
 		</ul>
 		</div>
 		</c:if> 
+		<!-- 行业资讯 end-->
+		
+			<!--公司新闻-->
+		<c:if test="${newsList[0].type=='公司新闻'}"> 
+		<div class="col-sm-offset-5">
+		<ul class="pagination">
+  			<li>
+  			<a 
+  			href="companyNews/pagination/prevPage"
+  			<c:if test="${pageMap.pageNo==1}">
+  			onClick="return false;"
+  			</c:if>
+  			>
+  			&laquo;</a>
+  			</li>
+			
+  			
+  			<c:if test="${pageMap.totalPage<=pageMap.pageNo+4}">
+  			<c:forEach begin="${pageMap.pageNo}" end="${pageMap.totalPage}" varStatus="status">
+  			<li <c:if test="${status.index==pageMap.pageNo}">
+  			class="active"
+  			</c:if>
+  			><a href="companyNews/pagination/${status.index }">${status.index}</a></li>
+  			</c:forEach>
+  			</c:if>
+  			<c:if test="${pageMap.totalPage>pageMap.pageNo+4}">
+  			<c:forEach begin="${pageMap.pageNo}" end="${pageMap.pageNo+4}" varStatus="status">
+  			<li <c:if test="${status.index==pageMap.pageNo}">
+  			class="active"
+  			</c:if>
+  			><a href="companyNews/pagination/${status.index }">${status.index}</a></li>
+  			</c:forEach>
+  			</c:if>
+  			<li><a href="companyNews/pagination/nextPage"
+  			<c:if test="${pageMap.pageNo==pageMap.totalPage}">
+  			onClick="return false;"
+  			</c:if>
+  			>&raquo;</a></li>
+		</ul>
+		</div>
+		</c:if> 
+		<!-- 公司新闻 end-->
+		
+			<!-- 优质服务-->
+		<c:if test="${newsList[0].type=='优质服务'}"> 
+		<div class="col-sm-offset-5">
+		<ul class="pagination">
+  			<li>
+  			<a href="qualityServices/pagination/prevPage"
+  			<c:if test="${pageMap.pageNo==1}">
+  			onClick="return false;"
+  			</c:if>
+  			>
+  			&laquo;</a>
+  			</li>
+  			<c:if test="${pageMap.totalPage<=pageMap.pageNo+4}">
+  			<c:forEach begin="${pageMap.pageNo}" end="${pageMap.totalPage}" varStatus="status">
+  			<li <c:if test="${status.index==pageMap.pageNo}">
+  			class="active"
+  			</c:if>
+  			><a href="qualityServices/pagination/${status.index }">${status.index}</a></li>
+  			</c:forEach>
+  			</c:if>
+  			<c:if test="${pageMap.totalPage>pageMap.pageNo+4}">
+  			<c:forEach begin="${pageMap.pageNo}" end="${pageMap.pageNo+4}" varStatus="status">
+  			<li <c:if test="${status.index==pageMap.pageNo}">
+  			class="active"
+  			</c:if>
+  			><a href="qualityServices/pagination/${status.index }">${status.index}</a></li>
+  			</c:forEach>
+  			</c:if>
+  			<li><a href="qualityServices/pagination/nextPage"
+  			<c:if test="${pageMap.pageNo==pageMap.totalPage}">
+  			onClick="return false;"
+  			</c:if>
+  			>&raquo;</a></li>
+		</ul>
+		</div>
+		</c:if> 
+		<!-- 优质服务 end-->
 		<!-- 分页 end -->
   </div>
   <!-- 主题内容end -->

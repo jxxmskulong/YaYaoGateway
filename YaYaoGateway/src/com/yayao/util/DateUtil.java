@@ -80,7 +80,8 @@ public class DateUtil {
      * @param <T>
      * @return 
      */  
-    public static  List<News> ListToDate(List<News> list){  
+    @SuppressWarnings("deprecation")
+	public static  List<News> ListToDate(List<News> list){  
     	for (News news : list) {
     		news.getCreateDate().toLocaleString();
 		}
@@ -92,7 +93,8 @@ public class DateUtil {
     //  timeStamp=1417792627  
     //  date=2014-12-05 23:17:07  
     //  1417792627  
-    public static void main(String[] args) {  
+    @SuppressWarnings("deprecation")
+	public static void main(String[] args) {  
     	System.out.println(getCurrentTime());
     	System.out.println(getOrdersTime());
     	String timeStamp = timeStamp();  

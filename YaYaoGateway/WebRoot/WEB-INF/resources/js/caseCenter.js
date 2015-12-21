@@ -17,7 +17,7 @@ $(function(){
 			$this.next().text("最美湘绣——做最美的你");
 		}
 		
-		//$this.next().children().css({"transform":"translateY(500px)","transition-delay":"0.5s"});
+		//$this.parent().next().css({"transform":"translateY(500px)","transition-delay":"0.5s"});
 		$this.next().show();
 		
 	});
