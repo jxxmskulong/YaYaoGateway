@@ -38,7 +38,8 @@
             <props>
                 <prop key="java.sql.SQLException">404</prop>
                 <prop key="java.io.IOException">404</prop>
-                <prop key="java.lang.exception">404</prop>
+                <prop key="java.lang.Exception">404</prop>
+                <prop key="java.lang.RuntimeException">404</prop>
             </props>
         </property>
     </bean> 

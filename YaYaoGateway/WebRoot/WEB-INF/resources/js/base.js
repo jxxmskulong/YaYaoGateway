@@ -10,6 +10,12 @@ $(function(){
     if($(window).width()>"768"){
     setInterval("$('#bottomhr').bottomhr()",500);
     }
+    /**
+     * 替换<br>标签为<p></p>
+     */
+    $("#contentText br").each(function(){
+    	$(this).after("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
+    });
 });
 /**
  * 元素居中
@@ -51,6 +57,27 @@ return this;
 			 var RegExp = /^(\d{3}-(\d{8})|(\d{7}))$|^(\d+)$|^(\d{4}-(\d{7})|(\d{8}))$|^(\d{7,8})$/;
 			     return RegExp.test(value);
 			   }, $.validator.format("电话号码输入不正确!"));
+
+/**
+ * 图片预加载
+ * 
+ */	
+	
+//	$("img").each(function(){
+//		var $this=$(this);
+//		alert("dfs")
+//		//alert($this.attr("src"))
+//		addImg('resources/img/5.jpg');
+//		function addImg(isrc) {
+//			imgObj1 = new Image();
+//			imgObj1.src = isrc;
+//			imgObj1.onload = function() {
+//				$this.src = this.src;
+//				//imgObj.height = 50;
+//				//imgObj.width = 50;
+//			}
+//		}
+//	});
 
 	/**
 	 * 验证中文

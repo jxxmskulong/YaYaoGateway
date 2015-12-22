@@ -4,6 +4,8 @@ import javax.annotation.Resource;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.yayao.service.CustomerService;
 
@@ -17,6 +19,7 @@ import com.yayao.service.CustomerService;
 public class JSPController {
 	@Resource(name="customerService")
 	private CustomerService customerService;
+	
 	
 	/*@RequestMapping(value="/{url}" )
 	public String init(@PathVariable("url")String url,HttpServletRequest request){

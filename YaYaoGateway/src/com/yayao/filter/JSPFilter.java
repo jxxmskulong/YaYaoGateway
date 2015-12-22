@@ -56,7 +56,6 @@ public class JSPFilter implements Filter {
     	servletRequest.getRequestDispatcher("/WEB-INF/backstage/index.jsp").forward(request, response);
 	}else if(new File(strBackUrl+"/WEB-INF/resources/img"+path).exists()){
 		servletRequest.getRequestDispatcher("/WEB-INF/resources/img"+path).forward(request, response);
-		
 	}else{
 		chain.doFilter(request, response);
 	}
