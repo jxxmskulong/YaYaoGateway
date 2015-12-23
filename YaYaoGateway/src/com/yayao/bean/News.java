@@ -17,7 +17,6 @@ public class News implements Serializable {
 	private String author;
 	private Integer views;
 	private String content;
-	
 	public News() {
 		super();
 	}
@@ -45,7 +44,6 @@ public class News implements Serializable {
 	public Integer getId() {
 		return id;
 	}
-
 	public void setId(Integer id) {
 		this.id = id;
 	}

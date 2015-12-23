@@ -89,6 +89,9 @@ $(function(){
                 success: function(data) {
                 	//alert(data);
                 	//$("#customerForm").parent().html("userName:"+data.userName+"cellPhone:"+data.cellPhone);
+                	if(data==null||data==undefined||data==''){
+                    	return;
+                    	}
                 	$("#customerForm").parent().html("<div class='glyphicon glyphicon-ok' style='color:green;font-size:1.2em;text-aglin:center;'>尊敬的"+data.userName+"，感谢您的宝贵信息，我们将竭诚为您服务！</div>");
                 	/*$("#customerMessage").text("尊敬的客户，感谢您的宝贵信息，我们将竭诚为您服务！");
                 	$("#userName").parent().html(data.userName);

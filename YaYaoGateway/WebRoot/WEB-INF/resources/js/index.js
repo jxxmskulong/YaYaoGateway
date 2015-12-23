@@ -90,6 +90,9 @@ $(function(){
                     alert("提交失败！");
                 },
                 success: function(data) {
+                	if(data==null||data==undefined||data==''){
+                	return;
+                	}
                 	//alert(data);
                 	//$("#customerForm").parent().html("userName:"+data.userName+"cellPhone:"+data.cellPhone);
                 	$("#customerForm").parent().html("<div class='jumbotron'>"+

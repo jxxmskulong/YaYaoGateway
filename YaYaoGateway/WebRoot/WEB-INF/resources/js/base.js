@@ -1,4 +1,4 @@
-$(function(){
+ $(function(){
 	//轮播图片
 		$("#myCarousel").carousel({interval:5000});
 	//回到顶部
@@ -16,6 +16,27 @@ $(function(){
     $("#contentText br").each(function(){
     	$(this).after("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
     });
+    /**
+     * 图片预加载
+     * 
+     */	
+   /*$("img").each(function(){
+    		var $this=$(this);
+    		var presrc=$this.attr("src");
+    		addImg('resources/img/prevLoad.jpg');
+    		function addImg(isrc) {
+    			imgObj1 = new Image();
+    			imgObj1.src = isrc;
+    			$this.attr("src",imgObj1.src);
+    			$this.load(function() {
+    				setTimeout(function(){
+    					$this.attr('src',presrc);
+   				}
+    				,1000);
+    			});
+    		}
+    	});*/
+
 });
 /**
  * 元素居中
@@ -48,6 +69,7 @@ return this;
 		$(this).css("height","5px");
 		//$(this).css("border-radius",$(this).css("width"));
 		$(this).css("background-color",colorstr[Math.ceil(Math.random()*10)]);
+		$(this).css("box-shadow","0 0 20px "+colorstr[Math.ceil(Math.random()*10)]);
 	});
 	}})(jQuery);
 /**
@@ -57,27 +79,6 @@ return this;
 			 var RegExp = /^(\d{3}-(\d{8})|(\d{7}))$|^(\d+)$|^(\d{4}-(\d{7})|(\d{8}))$|^(\d{7,8})$/;
 			     return RegExp.test(value);
 			   }, $.validator.format("电话号码输入不正确!"));
-
-/**
- * 图片预加载
- * 
- */	
-	
-//	$("img").each(function(){
-//		var $this=$(this);
-//		alert("dfs")
-//		//alert($this.attr("src"))
-//		addImg('resources/img/5.jpg');
-//		function addImg(isrc) {
-//			imgObj1 = new Image();
-//			imgObj1.src = isrc;
-//			imgObj1.onload = function() {
-//				$this.src = this.src;
-//				//imgObj.height = 50;
-//				//imgObj.width = 50;
-//			}
-//		}
-//	});
 
 	/**
 	 * 验证中文

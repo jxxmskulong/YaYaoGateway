@@ -46,13 +46,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    <div class="panel-body">
   <div class="container caseDIV">
    <div class="row">
-  <div class="col-lg-6">
-  <div class="glyphicon glyphicon-leaf"></div>
+  <div class="col-sm-6">
   <img src="resources/img/caseCenter/OnceBloodAndFire.jpg"/>
   <div></div>
   </div>
-  <div class=" col-lg-6">
-  <div class="glyphicon glyphicon-leaf"></div>
+  <div class="col-sm-6">
   <img src="resources/img/caseCenter/TheMostBeautifulEmbroideryXiuNv.jpg"/>
   <div></div>
   </div>
@@ -73,8 +71,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <!-- foot -->
   <c:import url="template/footTemplate.jsp" charEncoding="utf-8" ></c:import>
   <!-- foot end-->
-  
-  <script type="text/javascript" src="resources/js/lbsmap.js"></script>
   </body>
 </html>
 

@@ -1,6 +1,11 @@
 package com.yayao.bean;
 
 import java.io.Serializable;
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
+
 /**
  * 用户实体类
  * @author yy
@@ -10,9 +15,17 @@ public class Customer implements Serializable {
 	
 	private static final long serialVersionUID = 8198930199550185349L;
 	private Integer id;
+	@NotEmpty
+	@Length(min=2,max=16)
 	private String userName;
+	@NotEmpty
+	@Length(min=7,max=11)
 	private String cellPhone;
+	@NotEmpty
+	@Email
 	private String email;
+	@NotEmpty
+	@Length(min=2)
 	private String content;
 	
 	public Customer() {

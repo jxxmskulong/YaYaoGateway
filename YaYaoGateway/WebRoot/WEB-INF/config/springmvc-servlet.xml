@@ -24,6 +24,20 @@
 	<mvc:resources location="/resources/fonts/,/WEB-INF/resources/fonts/" mapping="/resources/fonts/**"/>
 <!-- 	<mvc:resources location="/,classpath:/META-INF/publicResources/" mapping="/resources/**"/> -->
 	
+	 <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+        <property name="providerClass"  value="org.hibernate.validator.HibernateValidator"/>
+        <!--不设置则默认为classpath下的 ValidationMessages.properties -->
+	
+        <property name="validationMessageSource" ref="validatemessageSource"/>
+    </bean>
+    <bean id="conversion-service" class="org.springframework.format.support.FormattingConversionServiceFactoryBean" />
+    <bean id="validatemessageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">  
+        <property name="basename" value="classpath:validatemessages"/>  
+        <property name="fileEncodings" value="utf-8"/>  
+        <property name="cacheSeconds" value="120"/>  
+    </bean>
+	 <mvc:annotation-driven validator="validator" conversion-service="conversion-service"/>
+	 
 	<!--对模型视图名称的解析，即在模型视图名称添加前后缀 -->  
         <bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
