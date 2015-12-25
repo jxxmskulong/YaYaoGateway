@@ -90,6 +90,7 @@ $(function(){
                     alert("提交失败！");
                 },
                 success: function(data) {
+                	//alert(data.content)
                 	if(data==null||data==undefined||data==''){
                 	return;
                 	}

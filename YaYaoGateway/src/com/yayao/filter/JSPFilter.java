@@ -9,6 +9,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 /**
  * 过滤请求实现rest风格
  * @author yy
@@ -28,7 +29,7 @@ public class JSPFilter implements Filter {
 			FilterChain chain) throws IOException, ServletException {
 		 // 获得在下面代码中要用的request,response
         HttpServletRequest servletRequest = (HttpServletRequest) request;
-        //HttpServletResponse servletResponse = (HttpServletResponse) response;
+        HttpServletResponse servletResponse = (HttpServletResponse) response;
 // 获得用户请求的URI
        // String rpath = servletRequest.getRequestURI(); 
         String path=servletRequest.getServletPath();
@@ -54,9 +55,11 @@ public class JSPFilter implements Filter {
 		servletRequest.getRequestDispatcher("/WEB-INF/foreground/index.jsp").forward(request, response);
 	}else if(path.equals("/Admin/")||path.equals("/Admin")){
     	servletRequest.getRequestDispatcher("/WEB-INF/backstage/index.jsp").forward(request, response);
-	}else if(new File(strBackUrl+"/WEB-INF/resources/img"+path).exists()){
-		servletRequest.getRequestDispatcher("/WEB-INF/resources/img"+path).forward(request, response);
-	}else{
+	}
+	//else if(new File(strBackUrl+"/WEB-INF"+path).exists()){
+		//servletRequest.getRequestDispatcher("/WEB-INF"+path).forward(request, response);
+	//}
+	else{
 		chain.doFilter(request, response);
 	}
 }

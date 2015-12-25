@@ -63,6 +63,7 @@ public class CustomerController {
 	@RequestMapping(value="/addCustomerContent",method=RequestMethod.POST)
 	public @ResponseBody Customer addCustomerContent(@Valid @ModelAttribute Customer customer,BindingResult result){
 		if(result.hasErrors()){
+			//customer.setContent(result.getFieldError().getDefaultMessage());
 			return null;
 		}
 		customerService.addCustomerContent(customer);

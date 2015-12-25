@@ -25,7 +25,7 @@ public class Customer implements Serializable {
 	@Email
 	private String email;
 	@NotEmpty
-	@Length(min=2)
+	@Length(min=2,message="最少2个字符")
 	private String content;
 	
 	public Customer() {
