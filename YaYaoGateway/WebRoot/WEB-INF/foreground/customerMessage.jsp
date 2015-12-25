@@ -74,7 +74,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <label for="email" class="col-sm-2 control-label" >EMAIL</label>
       <div class="col-sm-8">
          <input type="email" class="form-control" id="email" name="email" 
-            placeholder="请输入您的点子邮箱">
+            placeholder="请输入您的电子邮箱">
       </div>
    </div>
    <div class="form-group">
