@@ -86,7 +86,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	</div>
   	<div class="col-sm-offset-1 alert alert-info" id="index_concactUS" >
   	<div class="glyphicon glyphicon-home">&nbsp;湖南省长沙市岳麓区阳光城1107室</div>
-  	<div class="glyphicon glyphicon-phone-alt">&nbsp;0731-88033992</div>
+  	<div class="glyphicon glyphicon-phone-alt">&nbsp;<a href="tel:0731-88033992">0731-88033992</a></div>
   	</div>
   </div>
   </div>

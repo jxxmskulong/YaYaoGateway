@@ -61,7 +61,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <div class="h3" >您能给我们多少信任，我们就能给您多大惊喜</div>
   	<div class="alert alert-info">
   <div><span >公司地址：</span>湖南省长沙市岳麓区阳光城1107室</div>
-  	<div><span>公司座机：</span>0731-88033992</div>
+  	<div><span>公司座机：</span><a href="tel:0731-88033992">0731-88033992</a></div>
   	</div>
   </div>
   </div>
