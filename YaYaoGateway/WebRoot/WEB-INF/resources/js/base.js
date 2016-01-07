@@ -16,6 +16,30 @@
     $("#contentText br").each(function(){
     	$(this).after("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
     });
+  //导航变色
+    $(".nav li a").each(function(){
+    	var $this=$(this);
+    if(location.pathname.indexOf($this.attr("href"))>-1){
+    	$(this).parent().attr("class","active");
+    }
+    	
+    });
+    //pc 移动轮播图片展示
+    if( navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)){
+
+    	$("#myCarousel img").each(function(index){
+    		//alert(index+1)
+    		$(this).attr("src","resources/img/carousel/move/carousel"+(index+1)+".jpg")
+    	});
+    	//alert("shouji")
+    	}else{
+    		//alert("pc")
+    	$("#myCarousel img").each(function(index){
+    		//alert(index+1)
+    		$(this).attr("src","resources/img/carousel/carousel"+(index+1)+".jpg")
+    	});
+    		
+    		} 
     /**
      * 图片预加载
      * 

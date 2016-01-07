@@ -19,12 +19,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta name="description" content="雅耀（湖南）科技有限公司是一个线上线下结合形成一站式的综合性服务公司，业务涉及广泛，如广告，代理，茶叶，茶艺，保险，服务，活动等等">
 	<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="resources/css/base.css">
-	<script type="text/javascript" src="resources/js/jQuery1.11.3.js"></script>
-	<script type="text/javascript" src="resources/js/jquery.validate.min.js"></script>
-	<script type="text/javascript" src="resources/js/bootstrap3.2.0.js"></script>
-	<script type="text/javascript" src="resources/js/base.js"></script>
-	<script type="text/javascript" src="resources/js/customerMessage.js"></script>
-  </head>
+	  </head>
   
   <body>
  <!-- 顶部导航 -->
@@ -107,6 +102,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <!-- foot -->
   <c:import url="template/footTemplate.jsp" charEncoding="utf-8" ></c:import>
   <!-- foot end-->
+  <script type="text/javascript" src="resources/js/jQuery1.11.3.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="resources/js/bootstrap3.2.0.js"></script>
+	<script type="text/javascript" src="resources/js/base.js"></script>
+	<script type="text/javascript" src="resources/js/customerMessage.js"></script>
   </body>
 </html>
 
