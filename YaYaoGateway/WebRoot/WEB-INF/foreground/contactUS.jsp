@@ -33,7 +33,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div class="panel panel-default">
    <div class="panel-heading">
       <div class="page-header">
-   		<h2 class="col-md-offset-1">contactUS</h2>
+   		<h1 class="col-md-offset-1">contactUS</h1>
 	  </div>
 		<ol class="col-md-offset-1 breadcrumb">
   			<li><a href="index">网站首页</a></li>
@@ -54,7 +54,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <!-- 客户表单 -->
   <div class="col-sm-5 container">
   <div class="row">
-  <div class="h3" >您能给我们多少信任，我们就能给您多大惊喜</div>
+  <h3 class="text-center alert-warning" >您能给我们多少信任，我们就能给您多大惊喜</h3>
   	<div class="alert alert-info">
   <div><span >公司地址：</span>湖南省长沙市岳麓区阳光城1107室</div>
   	<div><span>公司座机：</span><a href="tel:0731-88033992">0731-88033992</a></div>

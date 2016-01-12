@@ -32,7 +32,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div class="panel panel-default">
    <div class="panel-heading">
       <div class="page-header">
-   		<h2 class="col-md-offset-1">customerMessage</h2>
+   		<h1 class="col-md-offset-1">customerMessage</h1>
 	  </div>
 		<ol class="col-md-offset-1 breadcrumb">
   			<li><a href="index">网站首页</a></li>
@@ -49,7 +49,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 要把它贯穿整个生态链中去。</p> 
    </div>
    <div class="form-group text-center">
-      <label class=" control-label glyphicon glyphicon-pencil" style="font-size:1.5em;color:#4b5cc4;" id="customerMessage">尊敬的客户，请填写您的需求，我们将竭诚为您服务！</label> 
+      <label class=" control-label glyphicon glyphicon-pencil customerMessage">尊敬的客户，请填写您的需求，我们将竭诚为您服务！</label> 
    </div>
    <div class="form-group">
       <label for="userName" class="col-sm-2 control-label" >姓名</label>

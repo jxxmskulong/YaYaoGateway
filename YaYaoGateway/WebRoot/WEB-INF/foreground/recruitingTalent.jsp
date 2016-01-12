@@ -32,14 +32,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div class="panel panel-default">
    <div class="panel-heading">
       <div class="page-header">
-   		<h2 class="col-md-offset-1">recruitingTalent</h2>
+   		<h1 class="col-md-offset-1">recruitingTalent</h1>
 	  </div>
 		<ol class="col-md-offset-1 breadcrumb">
   			<li><a href="index">网站首页</a></li>
  			<li class="active">招聘英才</li>
 		</ol> 
 	</div>
-   <div class="panel-body">
+   <div class="panel-body recruitingTalent">
   		 <div class="jumbotron container">
       	<div class="container" style="text-shadow:0 0 2px olive;color:green;">
       	<h2 class="text-center" >销售精英</h2>

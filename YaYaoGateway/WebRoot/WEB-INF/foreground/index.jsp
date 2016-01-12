@@ -91,7 +91,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <div class="col-sm-7">
   <form id="customerForm" class="form-horizontal" role="form" action="addCustomerContent" method="post" name="customer">
    <div class="form-group text-center">
-      <label class=" control-label glyphicon glyphicon-pencil" style="font-size:1.5em;color:#4b5cc4;" id="customerMessage">尊敬的客户，请填写您的需求，我们将竭诚为您服务！</label> 
+      <label class=" control-label glyphicon glyphicon-pencil customerMessage">尊敬的客户，请填写您的需求，我们将竭诚为您服务！</label> 
    </div>
    <div class="form-group">
       <label for="userName" class="col-sm-2 control-label" style="color:white;font-size:1.2em;">姓名</label>

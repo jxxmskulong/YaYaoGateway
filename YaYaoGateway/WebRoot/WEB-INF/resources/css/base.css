@@ -9,6 +9,19 @@ html{
 /* 	 background-color:#ffa400;  */
 }
 /**
+**h标签
+*/
+@media(max-width:750px){
+	h1{
+	font-size:20px;
+	font-weight: bold;
+}
+h2,h3,h4,h5,h6{
+ font-size:16px;
+ font-weight: bold;
+}
+}
+/**
 **a标签
 */
 a{
@@ -25,12 +38,72 @@ p{
  font-size:20px;
  line-height:220%;
 }
+@media(max-width:970px){
+	p{
+ color:#666;
+ font-size:18px;
+ line-height:180%;
+}
+}
+@media(max-width:750px){
+	p{
+ color:#666;
+ font-size:16px;
+ line-height:160%;
+}
+}
+@media(max-width:750px){
+	.recruitingTalent p{
+ font-size:14px;
+}
+}
+@media(max-width:750px){
+	.foot p{
+ font-size:14px;
+}
+}
+
+/**
+**customerForm p
+*/
+#customerForm p{
+ padding:0 5%;
+ font-size:20px;
+}
+@media(max-width:750px){
+	#customerForm p{
+ font-size:16px;
+}
+}
+/**
+**customerMessage
+*/
+.customerMessage{
+	padding:0 5%;
+	color:#4b5cc4;
+	font-size: 20px;
+}
+@media(max-width:750px){
+	.customerMessage{
+ font-size:16px;
+}
+}
 /**
 **newsDynamic_ul标签
 */
 .newsDynamic_ul li
 {
 	font-size:20px;
+}
+@media(max-width:970px){
+	.newsDynamic_ul li{
+ font-size:18px;
+}
+}
+@media(max-width:750px){
+	.newsDynamic_ul li{
+ font-size:16px;
+}
 }
 .newsDynamic_ul li a:hover{
 	color: red;
@@ -107,6 +180,12 @@ form{
 	color:#1685a9;
 	font-size:1.2em;
 }
+@media (max-width:768px){
+form{
+	
+	font-size:1em;
+}
+}
 /**
 **container
 */
@@ -171,7 +250,9 @@ form{
 	height:auto;
 	color:white;
 	width:100%;
+	
 }
+
 /*
 *
 *底部二维码
@@ -180,14 +261,7 @@ form{
 	margin-top:5%;
 	text-align:center;
 }
-/*
-*
-*底部copyright
-*/
-.foot_copy{
-	
-	font-size:20px;
-}
+
 /*
 *
 *联系我们

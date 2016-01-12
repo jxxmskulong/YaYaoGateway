@@ -34,7 +34,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div class="panel panel-default">
    <div class="panel-heading">
       <div class="page-header">
-   		<h2 class="col-md-offset-1" style="display:inline-block;">newsDynamic</h2>
+   		<h1 class="col-md-offset-1" style="display:inline-block;">newsDynamic</h1>
 		 <ul class=" col-md-offset-8 list-inline newsDynamic_ul">
   			<li><a href="industryInformation">行业资讯</a></li>
  			<li><a href="companyNews">公司新闻</a></li>

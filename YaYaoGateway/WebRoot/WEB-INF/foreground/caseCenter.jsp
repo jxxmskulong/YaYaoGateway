@@ -32,7 +32,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div class="panel panel-default">
    <div class="panel-heading">
       <div class="page-header">
-   		<h2 class="col-md-offset-1">caseCenter</h2>
+   		<h1 class="col-md-offset-1">caseCenter</h1>
 	  </div>
 		<ol class="col-md-offset-1 breadcrumb">
   			<li><a href="index">网站首页</a></li>
