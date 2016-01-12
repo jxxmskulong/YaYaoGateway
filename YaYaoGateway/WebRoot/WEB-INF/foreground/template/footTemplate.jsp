@@ -20,7 +20,7 @@
   </div>
   <!-- 二维码 -->
   <div class="QRCode col-md-3">
-  <img src="resources/img/YaYaoQRCode.jpg" style="width:80px;height:80px;"/>
+  <img  data-original="resources/img/YaYaoQRCode.jpg" name="lazy" style="width:80px;height:80px;"/>
   <div>网站二维码</div>
   <div>扫一扫，有惊喜哦！</div>
   </div>

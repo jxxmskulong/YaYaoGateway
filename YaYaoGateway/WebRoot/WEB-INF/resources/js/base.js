@@ -41,25 +41,13 @@
     		
     		} 
     /**
-     * 图片预加载
+     * 图片懒加载
      * 
      */	
-   /*$("img").each(function(){
-    		var $this=$(this);
-    		var presrc=$this.attr("src");
-    		addImg('resources/img/prevLoad.jpg');
-    		function addImg(isrc) {
-    			imgObj1 = new Image();
-    			imgObj1.src = isrc;
-    			$this.attr("src",imgObj1.src);
-    			$this.load(function() {
-    				setTimeout(function(){
-    					$this.attr('src',presrc);
-   				}
-    				,1000);
-    			});
-    		}
-    	});*/
+    $("img[name='lazy']").lazyload({   
+        threshold : 200,
+        effect : "fadeIn"   
+    }); 
 
 });
 /**

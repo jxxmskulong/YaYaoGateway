@@ -81,6 +81,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <c:import url="template/footTemplate.jsp" charEncoding="utf-8" ></c:import>
   <!-- foot end-->
   <script type="text/javascript" src="resources/js/jQuery1.11.3.js"></script>
+  <script type="text/javascript" src="resources/js/jquery.lazyload.js"></script>
 	<script type="text/javascript" src="resources/js/bootstrap3.2.0.js"></script>
 	<script type="text/javascript" src="resources/js/base.js"></script>
 	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=3a8218d248222e29a8ed7fe0d29ff517"></script>

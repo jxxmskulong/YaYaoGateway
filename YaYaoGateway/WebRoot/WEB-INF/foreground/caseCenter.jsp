@@ -43,11 +43,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <div class="container caseDIV">
    <div class="row">
   <div class="col-sm-6">
-  <img src="resources/img/caseCenter/OnceBloodAndFire.jpg"/>
+  <img name="lazy" data-original="resources/img/caseCenter/OnceBloodAndFire.jpg"/>
   <div></div>
   </div>
   <div class="col-sm-6">
-  <img src="resources/img/caseCenter/TheMostBeautifulEmbroideryXiuNv.jpg"/>
+  <img name="lazy" data-original="resources/img/caseCenter/TheMostBeautifulEmbroideryXiuNv.jpg"/>
   <div></div>
   </div>
   </div>
@@ -68,6 +68,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <c:import url="template/footTemplate.jsp" charEncoding="utf-8" ></c:import>
   <!-- foot end-->
   <script type="text/javascript" src="resources/js/jQuery1.11.3.js"></script>
+  <script type="text/javascript" src="resources/js/jquery.lazyload.js"></script>
 	<script type="text/javascript" src="resources/js/bootstrap3.2.0.js"></script>
 	<script type="text/javascript" src="resources/js/base.js"></script>
 	<script type="text/javascript" src="resources/js/caseCenter.js"></script>
