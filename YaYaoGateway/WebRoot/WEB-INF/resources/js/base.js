@@ -1,4 +1,4 @@
- $(function(){
+$(function(){
 	//轮播图片
 		$("#myCarousel").carousel({interval:5000});
 	//回到顶部
@@ -48,7 +48,7 @@
         threshold : 200,
         effect : "fadeIn"   
     }); 
-
+   
 });
 /**
  * 元素居中
