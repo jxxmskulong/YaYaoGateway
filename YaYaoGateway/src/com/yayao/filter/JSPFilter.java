@@ -40,7 +40,10 @@ public class JSPFilter implements Filter {
 	//servletRequest.getRequestDispatcher("/WEB-INF"+path).forward(request, response);
 }else*/
 	if (path.indexOf("resources")==-1&&(path.indexOf(".")>-1||path.indexOf("\\")>-1)){
-	//对请求过滤
+	if(path.indexOf(".ico")!=-1){
+		chain.doFilter(request, response);
+	}
+		//对请求过滤
 	 servletRequest.getRequestDispatcher("/WEB-INF/foreground/404.jsp").forward(request, response);
 	  //servletResponse.sendRedirect(servletRequest.getContextPath()+"/404.html");
 }else {
