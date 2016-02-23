@@ -30,6 +30,12 @@ public class JSPFilter implements Filter {
 		 // 获得在下面代码中要用的request,response
         HttpServletRequest servletRequest = (HttpServletRequest) request;
         HttpServletResponse servletResponse = (HttpServletResponse) response;
+        //实现跨域
+        servletResponse.setHeader("Access-Control-Allow-Origin", "*");
+        servletResponse.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
+        servletResponse.setHeader("Access-Control-Max-Age", "3600");
+        servletResponse.setHeader("Access-Control-Allow-Headers", "x-requested-with");
+        //chain.doFilter(request, response);
 // 获得用户请求的URI
        // String rpath = servletRequest.getRequestURI(); 
         String path=servletRequest.getServletPath();
@@ -40,7 +46,7 @@ public class JSPFilter implements Filter {
 	//servletRequest.getRequestDispatcher("/WEB-INF"+path).forward(request, response);
 }else*/
 	if (path.indexOf("resources")==-1&&(path.indexOf(".")>-1||path.indexOf("\\")>-1)){
-	if(path.indexOf(".ico")!=-1){
+	if(path.indexOf(".ico")!=-1||path.indexOf(".txt")!=-1){
 		chain.doFilter(request, response);
 	}
 		//对请求过滤
