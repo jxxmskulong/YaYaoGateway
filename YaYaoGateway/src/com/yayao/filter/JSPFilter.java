@@ -46,13 +46,17 @@ public class JSPFilter implements Filter {
 	//servletRequest.getRequestDispatcher("/WEB-INF"+path).forward(request, response);
 }else*/
 	if (path.indexOf("resources")==-1&&(path.indexOf(".")>-1||path.indexOf("\\")>-1)){
-	if(path.indexOf(".ico")!=-1||path.indexOf(".txt")!=-1){
+	if(path.indexOf(".ico")!=-1){
 		chain.doFilter(request, response);
-	}
+	}else if(path.indexOf(".txt")!=-1){
+		 servletRequest.getRequestDispatcher(path).forward(request, response);
+		 
+	}else{
 		//对请求过滤
 	 servletRequest.getRequestDispatcher("/WEB-INF/foreground/404.jsp").forward(request, response);
 	  //servletResponse.sendRedirect(servletRequest.getContextPath()+"/404.html");
-}else {
+	}
+	}else {
 	if(new File(strBackUrl+path+".jsp").exists()){
 		servletRequest.getRequestDispatcher(path+".jsp").forward(request, response);
 	}else if(new File(strBackUrl+"/WEB-INF/foreground"+path+".jsp").exists()){

@@ -22,6 +22,7 @@
 	<mvc:resources location="/resources/img/,/WEB-INF/resources/img/" mapping="/resources/img/**"/>
 	<mvc:resources location="/resources/js/,/WEB-INF/resources/js/" mapping="/resources/js/**"/>
 	<mvc:resources location="/resources/fonts/,/WEB-INF/resources/fonts/" mapping="/resources/fonts/**"/>
+	<mvc:resources location="/" mapping="/**"/>
 <!-- 	<mvc:resources location="/,classpath:/META-INF/publicResources/" mapping="/resources/**"/> -->
 	
 	  <mvc:annotation-driven validator="validator" conversion-service="conversion-service"/>
