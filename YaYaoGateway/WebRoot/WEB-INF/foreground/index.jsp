@@ -35,8 +35,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div id="summary-container" class="row" style="padding:5%;background-color:white;">
         <div class="col-md-offset-1 col-md-3 text-center">
             <div class="glyphicon glyphicon-home" style="color:#ff3300;font-size:5em;"></div>
-            <h2 style="color:#ff3300;">广告代理<br/>
-            <small>Advertising agency</small>
+            <h2 style="color:#ff3300;">合作平台<br/>
+            <small>Cooperation platform</small>
             </h2>
 
             <p><a href="http://www.fengchuan100.com/">疯传</a>、<a href="http://toutiao.com/">今日头条</a>、<a href="http://www.cctvmall.com/">央视网商城</a>各大流量平台合作，为您的产品公司提供优质的服务。</p>
